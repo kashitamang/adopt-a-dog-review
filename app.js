@@ -8,9 +8,10 @@ let dogs = [];
 // on load
 // fetch all dogs
 window.addEventListener('load', async () => {
-    const response = await getDogs();
-    dogs = response;
-    console.log(response);
+    const dogsResponse = await getDogs();
+    dogs = dogsResponse;
+
+    console.log('dogsResponse', dogsResponse);
     displayDogs();
 });
 

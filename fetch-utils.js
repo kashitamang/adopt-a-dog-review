@@ -6,12 +6,13 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getDogs() {
     // from the dogs table, select all items
-    let { data } = await client.from('dogs').select('*');
+    let { data } = await client.from('dogs').select(`*, dog_breeds (name)`);
     // and return the response
     return data;
 }
 
 export async function getDog(id) {
     // from the dogs table, select a single dog who has the matching id
+    // let { data } =
     // and return the response
 }
