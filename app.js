@@ -1,5 +1,5 @@
-import { getDogs } from './fetch-utils.js';
-import { renderDogCard } from './render-utils.js';
+import { getDogs, getDog } from './fetch-utils.js';
+import { renderDogCard, renderDogDetail } from './render-utils.js';
 
 const dogListContainer = document.getElementById('dog-list-container');
 
@@ -11,7 +11,8 @@ window.addEventListener('load', async () => {
     const dogsResponse = await getDogs();
     dogs = dogsResponse;
 
-    console.log('dogsResponse', dogsResponse);
+    console.log('dogs', dogs);
+
     displayDogs();
 });
 
