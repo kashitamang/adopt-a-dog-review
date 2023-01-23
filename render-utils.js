@@ -26,6 +26,18 @@ export function renderDogDetail(dog) {
     const breedEl = document.createElement('p');
     const ageAndBreedEl = document.createElement('div');
 
+    div.classList.add('dog-detail');
+    nameEl.classList.add('name');
+    ageAndBreedEl.classList.add('age-and-breed');
+    descriptionEl.classList.add('description');
+
+    descriptionEl.textContent = dog.description;
+    nameEl.textContent = dog.name;
+    ageEl.textContent = dog.age;
+    breedEl.textContent = dog.dog_breeds.name;
+
+    ageAndBreedEl.append(ageEl, breedEl);
+    div.append(img, descriptionEl, ageAndBreedEl);
     // examine the css classes already written and finish writing a detail page using the above elements
 
     return div;
